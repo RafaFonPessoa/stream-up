@@ -1,0 +1,5 @@
+body:not(form){
+    background-image: url(streamuplogo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
