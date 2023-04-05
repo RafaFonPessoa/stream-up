@@ -1,0 +1,74 @@
+.modal-content {
+  background-color: black;
+}
+.modal-title{
+  color: azure;
+}
+.modal-body {
+  color: azure;
+}
+.btn-secondary {
+  background-color: #5C5C5C;
+  border-color: #5C5C5C;
+}
+.btn-secondary:hover {
+  background-color: #5C5C5C;
+  border-color: #5C5C5C;
+}
+.btnex {
+  text-decoration: none;
+  color: #ffffff;
+}
+body{
+  background-color: rgb(148, 47, 47);
+}
+.btn-primary:hover {
+  background-color: #A81717;
+  border-color: #A81717;
+
+}
+.btn-primary {
+  background-color: #A81717;
+  border-color: #A81717;
+  
+}
+.jota{
+  border-top-left-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
+  padding: 10px;
+  align-self: center;
+}
+.jota img {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.btnpais {
+  text-decoration: none;
+  font-size: 50px;
+  color: azure;
+  position: relative;
+  top: 20px;
+  left: 120px;
+}
+.btnidioma {
+  text-decoration: none;
+  font-size: 50px;
+  color: azure;
+  position: relative;
+  top: 20px;
+  left: 120px;
+}
+.rounded-circle-profile {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.rounded-circle-profile:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
