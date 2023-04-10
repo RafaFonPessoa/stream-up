@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
 <body>
       
-  <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModal" >Excluir conta</a>
+ 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content" id="modalExcluir">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir conta</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -22,7 +25,7 @@
         <div class="modal-body">
           Tem certeza que deseja excluir sua conta ?
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" id="modalFoex">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-primary">Sim</button>
         </div>
@@ -31,11 +34,10 @@
   </div>
 
 
-  <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModaldois" >Sair</a>
   
   <div class="modal fade" id="exampleModaldois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content" id="modalSair">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Sair</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -43,7 +45,7 @@
         <div class="modal-body">
           Tem certeza que deseja sair da sua conta ?
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" id="modalFosa">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-primary">Sim</button>
         </div>
@@ -54,7 +56,7 @@
 
   <!-- Button trigger modal -->
   <div>
-    <a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModaltres"> <img src="as.jpeg" class="rounded-circle-profile" alt=""></a>
+    <a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModaltres"> <img src="marcos.jpeg" class="rounded-circle-profile" alt=""></a>
   </div>
   
 
@@ -63,28 +65,173 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Olá Antonio Marcos !</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title" id="exampleModalLabel">Olá Antonio Marcos !</h1>
       </div>
-      <div class="modal-body" style="overflow-y: auto; max-height: 400px;">
+      <div class="modal-body" style=" max-height: 400px;">
         <p>antonio123@gmail.com</p>
       </div>
       <div class="jota">
-        <img src="as.jpeg" class="rounded-circle" alt="Foto de perfil">
+        <img src="marcos.jpeg" class="rounded-circle" alt="Foto de perfil">
       </div>
-      <div>
-        <p><a href="#" class="btnpais">País</a></p>
-        <p><a href="#" class="btnidioma">Idioma</a></p>
+      <div class="paisIdioma">
+        <div>
+        <p><a href="#" class="btnpais" data-bs-toggle="modal" data-bs-target="#modalpais"> <img src="mundo1.png" alt="" id="mundo"> País</a></a></p>
+        <p id="salve">Brazil</p>
+        </div>
+        <div>
+        <p><a href="#" class="btnidioma"> <img src="idioma.png" alt="" id="idioma"> Idioma</a></p>
+        <p id="salvetmb">Português</p>
+        </div>
       </div>
       <div class="modal-footer">
         <div>
-          
+          <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModal" >Excluir conta</a> 
+          <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModaldois">Sair</a>
         </div>
-        
       </div>
     </div>
   </div>
 </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalpais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+        <h1 class="tituloPais">País</h1>
+        <p> Selecione seu país </p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="idiomas">
+          <input type="text" id="pesquisar-idioma" placeholder="Selecione seu País">
+          <div class="lista-idiomas">
+            <ul>
+              <li>Afeganistão</li>
+              <li>África do Sul</li>
+              <li>Albânia</li>
+              <li>Alemanha</li>
+              <li>Andorra</li>
+              <li>Angola</li>
+              <li>Antígua e Barbuda</li>
+              <li>Arábia Saudita</li>
+              <li>Argélia</li>
+              <li>Argentina</li>
+              <li>Armênia</li>
+              <li>Austrália</li>
+              <li>Áustria</li>
+              <li>Azerbaijão</li>
+              <li>Bahamas</li>
+              <li>Bahrain</li>
+              <li>Bangladesh</li>
+              <li>Barbados</li>
+              <li>Bélgica</li>
+              <li>Belize</li>
+              <li>Benin</li>
+              <li>Bielorrússia</li>
+              <li>Bolívia</li>
+              <li>Bósnia e Herzegovina</li>
+              <li>Botsuana</li>
+              <li>Brasil</li>
+              <li>Brunei</li>
+              <li>Bulgária</li>
+              <li>Burkina Faso</li>
+              <li>Burundi</li>
+              <li>Butão</li>
+              <li>Cabo Verde</li>
+              <li>Camarões</li>
+              <li>Camboja</li>
+              <li>Canadá</li>
+              <li>Catar</li>
+              <li>Cazaquistão</li>
+              <li>Chade</li>
+              <li>Chile</li>
+              <li>China</li>
+              <li>Chipre</li>
+              <li>Cingapura</li>
+              <li>Colômbia</li>
+              <li>Comores</li>
+              <li>Congo</li>
+              <li>Coreia do Norte</li>
+              <li>Coreia do Sul</li>
+              <li>Costa do Marfim</li>
+              <li>Costa Rica</li>
+              <li>Croácia</li>
+              <li>Cuba</li>
+              <li>Dinamarca</li>
+              <li>Djibouti</li>
+              <li>Dominica</li>
+              <li>Egito</li>
+              <li>El Salvador</li>
+              <li>Emirados Árabes Unidos</li>
+              <li>Equador</li>
+              <li>Eritreia</li>
+              <li>Eslováquia</li>
+              <li>Eslovênia</li>
+              <li>Espanha</li>
+              <li>Estados Unidos da América</li>
+              <li>Estônia</li>
+              <li>Etiópia</li>
+              <li>Fiji</li>
+              <li>Filipinas</li>
+              <li>Finlândia</li>
+              <li>França</li>
+              <li>Gabão</li>
+              <li>Gâmbia</li>
+              <li>Gana</li>
+              <li>Geórgia</li>
+              <li>Granada</li>
+              <li>Grécia</li>
+              <li>Guatemala</li>
+              <li>Guiana</li>
+              <li>Guiné</li>
+              <li>Guiné Equatorial</li>
+              <li>Guiné-Bissau</li>
+              <li>Haiti</li>
+              <li>Honduras</li>
+              <li>Hungria</li>
+              <li>IAlanda</li>
+              <li>Índia</li>
+              <li>Indonésia</li>
+              <li>Irã</li>
+              <li>Iraque</li>
+              <li>Israel</li>
+              <li>Ingês</li>
+              <li>Jamaica</li>
+              <li>Japão</li>
+              <li>Jordânia</li>
+              <li>Laos</li>
+              <li>Zâmbia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const inputPesquisa = document.getElementById('pesquisar-idioma');
+const listaIdiomas = document.querySelector('.lista-idiomas ul');
+const itensLista = listaIdiomas.getElementsByTagName('li');
+
+inputPesquisa.addEventListener('keyup', function() {
+  const termoPesquisa = inputPesquisa.value.toLowerCase();
+
+  for (let i = 0; i < itensLista.length; i++) {
+    const itemTexto = itensLista[i].textContent.toLowerCase();
+
+    if (itemTexto.indexOf(termoPesquisa) > -1) {
+      itensLista[i].style.display = 'block';
+    } else {
+      itensLista[i].style.display = 'none';
+    }
+  }
+});
+</script>
 
 
 
