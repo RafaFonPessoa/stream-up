@@ -54,13 +54,13 @@
   </div>
 
 
-  <!-- Button trigger modal -->
+
   <div>
     <a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModaltres"> <img src="marcos.jpeg" class="rounded-circle-profile" alt=""></a>
   </div>
   
 
-<!-- Modal -->
+
 <div class="modal fade" id="exampleModaltres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -79,7 +79,7 @@
         <p id="salve">Brazil</p>
         </div>
         <div>
-        <p><a href="#" class="btnidioma"> <img src="idioma.png" alt="" id="idioma"> Idioma</a></p>
+        <p><a href="#" class="btnidioma" data-bs-toggle="modal" data-bs-target="#modalIdiomaPais" > <img src="idioma.png" alt="" id="idioma"> Idioma</a></p>
         <p id="salvetmb">Português</p>
         </div>
       </div>
@@ -95,19 +95,19 @@
 
 
 
-<!-- Modal -->
+
 <div class="modal fade" id="modalpais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" id="modalContent">
       <div class="modal-header">
         <div>
         <h1 class="tituloPais">País</h1>
-        <p> Selecione seu país </p>
+        <p> Por favor, escolha seu país </p>
         </div>
       </div>
       <div class="modal-body">
         <div class="idiomas">
-          <input type="text" id="pesquisar-idioma" placeholder="Selecione seu País">
+          <input type="text" id="pesquisar-idioma" placeholder="Escolha seu país">
           <div class="lista-idiomas">
             <ul>
               <li>Afeganistão</li>
@@ -213,6 +213,60 @@
   </div>
 </div>
 
+
+<div class="modal fade" id="modalIdiomaPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-header">
+        <div>
+          <h1 class="tituloPais">Idioma</h1>
+          <p> Por favor, escolha seu idioma </p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="paises">
+          <input type="text" id="pesquisar-pais" placeholder="Escolha seu idioma">
+          <div class="lista-paises">
+            <ul>
+              <li>Inglês</li>
+              <li>Espanhol</li>
+              <li>Chinês (mandarim)</li>
+              <li>Hindi</li>
+              <li>Árabe</li>
+              <li>Português</li>
+              <li>Bengali</li>
+              <li>Russo</li>
+              <li>Japonês</li>
+              <li>Punjabi</li>
+              <li>Alemão</li>
+              <li>Javanês</li>
+              <li>Wu</li>
+              <li>Malaio</li>
+              <li>Telugu</li>
+              <li>Francês</li>
+              <li>Marathi</li>
+              <li>Tâmil</li>
+              <li>Jin</li>
+              <li>Urdu</li>
+              <li>Turco</li>
+              <li>Italiano</li>
+              <li>Min Nan</li>
+              <li>Cantonês</li>
+              <li>Polonês</li>
+              <li>Ucraniano</li>
+              <li>Persa</li>
+              <li>Xiang</li>
+              <li>Malaiala</li>
+              <li>Gujarati</li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
 <script>
 const inputPesquisa = document.getElementById('pesquisar-idioma');
 const listaIdiomas = document.querySelector('.lista-idiomas ul');
@@ -231,6 +285,26 @@ inputPesquisa.addEventListener('keyup', function() {
     }
   }
 });
+
+const inputPesquisaa = document.getElementById('pesquisar-pais');
+const listaPaisess = document.querySelector('.lista-paises ul');
+const itensListaa = listaPaisess.getElementsByTagName('li');
+
+inputPesquisaa.addEventListener('keyup', function() {
+  const termoPesquisaa = inputPesquisaa.value.toLowerCase();
+
+  for (let i = 0; i < itensListaa.length; i++) {
+    const itemTextoo = itensListaa[i].textContent.toLowerCase();
+
+    if (itemTextoo.indexOf(termoPesquisaa) > -1) {
+      itensListaa[i].style.display = 'block';
+    } else {
+      itensListaa[i].style.display = 'none';
+    }
+  }
+});
+
+
 </script>
 
 
