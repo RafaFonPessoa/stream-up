@@ -1,12 +1,4 @@
-.modal-content {
-  background-color: black;
-}
-.modal-title{
-  color: #ffffff;
-}
-.modal-body {
-  color: #797a7b;
-}
+
 .btn-secondary {
   background-color: #5C5C5C;
   border-color: #5C5C5C;
@@ -23,9 +15,7 @@
   top: 20px;
   right: 350px; 
 }
-body{
-  background-color: rgb(148, 47, 47);
-}
+
 .btn-primary:hover {
   background-color: #A81717;
   border-color: #A81717;
@@ -36,19 +26,7 @@ body{
   border-color: #A81717;
   
 }
-.jota{
-  border-top-left-radius: 0.9rem;
-  border-top-right-radius: 0.9rem;
-  padding: 10px;
-  align-self: center;
-  position: relative;
-  top: -20px;
-}
-.jota img {
-  width: 100px;
-  height: 100px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
+
 .btnpais {
   text-decoration: none;
   font-size: 50px;
@@ -123,10 +101,6 @@ body{
 #modalIdPais {
   font-size: 30px;
 }
-.tituloPais {
-  color: azure;
-  
-}
 .js-example-basic-multiple{
   width: 80%;
   height: 80%;
@@ -160,10 +134,6 @@ body{
   cursor: pointer;
 }
 
-.lista-idiomas li:hover {
-  background-color: #020101;
-}
-
 #pesquisar-idioma:focus + .lista-idiomas {
   display: block;
 }
@@ -193,10 +163,6 @@ body{
 .lista-paises li {
   padding: 5px;
   cursor: pointer;
-}
-
-.lista-paises li:hover {
-  background-color: #020101;
 }
 
 #pesquisar-pais:focus + .lista-paises {
