@@ -1,210 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Tela Principal</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-  <!-- Importando o jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Importando os scripts do Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-
-  <style>
-    .navbar {
-      background-image: linear-gradient(to right, #000000, #dc3545);
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .profile {
-      width: 75px;
-      height: 75px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-
-    .profile img {
-      width: 100%;
-      height: auto;
-    }
-
-    .carousel-item {
-      height: 70vh;
-      min-height: 400px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-
-
-    .carousel-caption {
-      bottom: 20%;
-      z-index: 10;
-    }
-
-    .carousel-caption h3 {
-      font-size: 3.5em;
-      font-weight: 500;
-      letter-spacing: 2px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .carousel-caption p {
-      font-size: 1.5em;
-      letter-spacing: 1px;
-    }
-  </style>
-</head>
-
-<body class="bg-black text-white">
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary text-white">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="streamuplogo.png" alt="Streamuplogo" width="120" height="96">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link disabled text-secondary" aria-current="page" href="#">Pagina Principal</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="telaMLista.html">Minha Lista</a>
-          </li>
-        </ul>
-        <form class="d-flex mx-auto" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-          <button class="btn btn-secondary" type="submit">Pesquisar</button>
-        </form>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark" style="background-color: black;" id="modalExcluir">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir conta</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="profile">
-        <a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModaltres"> <img src="marcos.jpeg" class="rounded-circle-profile" alt=""></a>
+      <div class="modal-body">
+        Tem certeza que deseja excluir sua conta ?
       </div>
-    </div>
-  </nav>
-
-  <script>
-    const iconePerfil = document.getElementById('profile-picture');
-    const modal = document.getElementById('exampleModaltres');
-
-    iconePerfil.addEventListener('click', function () {
-      modal.style.display = 'block';
-    });
-  </script>
-
-
-  <!-- Carousel -->
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-interval="2500">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="JohnWick.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="Creed3.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="thebatman.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="TopGun.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="D&D.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="Quemario.png" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-  <br>
-
- <div class="container bg-black">
-  <h1> Recomendados </h1>
- </div>
-
-  <br>
-
-  <div class="container" id="containerFilmes">
-    <div class="row" id="linha1">
-      <div class="col-md-3">
-        <a href=""> <img src="ligaDaJustica.jpeg" class="moldura" alt="" ></a>
-      </div>
-      <div class="col-md-3">
-        <a href=""> <img src="vidro.jpeg" class="moldura" alt=""></a>
-      </div>
-      <div class="col-md-3">
-        <a href=""> <img src="segredosDosAnimais.jpeg" class="moldura" alt=""></a>
-      </div>
-      <div class="col-md-3">
-        <a href=""> <img src="matrix.jpeg" class="moldura" alt=""></a>
+      <div class="modal-footer" id="modalFoex">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Sim</button>
       </div>
     </div>
   </div>
+</div>
 
-
-<!--------------------- Codigo da modal ------------------------->
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" id="modalExcluir">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir conta</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Tem certeza que deseja excluir sua conta ?
-        </div>
-        <div class="modal-footer" id="modalFoex">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Sim</button>
-        </div>
+<div class="modal fade" id="exampleModaldois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" id="modalSair">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Sair</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Tem certeza que deseja sair da sua conta ?
+      </div>
+      <div class="modal-footer" id="modalFosa">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Sim</button>
       </div>
     </div>
   </div>
- 
-  <div class="modal fade" id="exampleModaldois" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content" id="modalSair">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Sair</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Tem certeza que deseja sair da sua conta ?
-        </div>
-        <div class="modal-footer" id="modalFosa">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Sim</button>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 
 <div class="modal fade" id="exampleModaltres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -216,21 +44,23 @@
         <p>antonio123@gmail.com</p>
       </div>
       <div class="jota">
-        <img src="marcos.jpeg" class="rounded-circle" alt="Foto de perfil">
+        <img src="imagens/marcos.jpeg" class="rounded-circle" alt="Foto de perfil">
       </div>
       <div class="paisIdioma">
         <div>
-        <p><a href="#" class="btnpais" data-bs-toggle="modal" data-bs-target="#modalpais"> <img src="mundo1.png" alt="" id="mundo"> País</a></a></p>
-        <p id="salve">Brazil</p>
+          <p><a href="#" class="btnpais" data-bs-toggle="modal" data-bs-target="#modalpais"> <img src="imagens/mundo1.png"
+                alt="" id="mundo"> País</a></a></p>
+          <p id="salve">Brazil</p>
         </div>
         <div>
-        <p><a href="#" class="btnidioma" data-bs-toggle="modal" data-bs-target="#modalIdiomaPais" > <img src="idioma.png" alt="" id="idioma"> Idioma</a></p>
-        <p id="salvetmb">Português</p>
+          <p><a href="#" class="btnidioma" data-bs-toggle="modal" data-bs-target="#modalIdiomaPais"> <img
+                src="imagens/idioma.png" alt="" id="idioma"> Idioma</a></p>
+          <p id="salvetmb">Português</p>
         </div>
       </div>
       <div class="modal-footer">
         <div>
-          <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModal" >Excluir conta</a> 
+          <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModal">Excluir conta</a>
           <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#exampleModaldois">Sair</a>
         </div>
       </div>
@@ -243,8 +73,8 @@
     <div class="modal-content" id="modalContent">
       <div class="modal-header">
         <div>
-        <h1 class="tituloPais">País</h1>
-        <p> Por favor, escolha seu país </p>
+          <h1 class="tituloPais">País</h1>
+          <p> Por favor, escolha seu país </p>
         </div>
       </div>
       <div class="modal-body">
@@ -278,51 +108,58 @@
               <li>Inglês</li>
               <li>Gujarati</li>
             </ul>
-            
+
           </div>
         </div>
       </div>
 
+      <script>
+        const inputPesquisa = document.getElementById('pesquisar-idioma');
+        const listaIdiomas = document.querySelector('.lista-idiomas ul');
+        const itensLista = listaIdiomas.getElementsByTagName('li');
+
+        inputPesquisa.addEventListener('keyup', function () {
+          const termoPesquisa = inputPesquisa.value.toLowerCase();
+
+          for (let i = 0; i < itensLista.length; i++) {
+            const itemTexto = itensLista[i].textContent.toLowerCase();
+
+            if (itemTexto.indexOf(termoPesquisa) > -1) {
+              itensLista[i].style.display = 'block';
+            } else {
+              itensLista[i].style.display = 'none';
+            }
+          }
+        });
+
+        const inputPesquisaa = document.getElementById('pesquisar-pais');
+        const listaPaisess = document.querySelector('.lista-paises ul');
+        const itensListaa = listaPaisess.getElementsByTagName('li');
+
+        inputPesquisaa.addEventListener('keyup', function () {
+          const termoPesquisaa = inputPesquisaa.value.toLowerCase();
+
+          for (let i = 0; i < itensListaa.length; i++) {
+            const itemTextoo = itensListaa[i].textContent.toLowerCase();
+
+            if (itemTextoo.indexOf(termoPesquisaa) > -1) {
+              itensListaa[i].style.display = 'block';
+            } else {
+              itensListaa[i].style.display = 'none';
+            }
+          }
+        });
+      </script>
+
+
 <script>
-const inputPesquisa = document.getElementById('pesquisar-idioma');
-const listaIdiomas = document.querySelector('.lista-idiomas ul');
-const itensLista = listaIdiomas.getElementsByTagName('li');
+  const iconePerfil = document.getElementById('profile-picture');
+  const modal = document.getElementById('exampleModaltres');
 
-inputPesquisa.addEventListener('keyup', function() {
-  const termoPesquisa = inputPesquisa.value.toLowerCase();
-
-  for (let i = 0; i < itensLista.length; i++) {
-    const itemTexto = itensLista[i].textContent.toLowerCase();
-
-    if (itemTexto.indexOf(termoPesquisa) > -1) {
-      itensLista[i].style.display = 'block';
-    } else {
-      itensLista[i].style.display = 'none';
-    }
-  }
-});
-
-const inputPesquisaa = document.getElementById('pesquisar-pais');
-const listaPaisess = document.querySelector('.lista-paises ul');
-const itensListaa = listaPaisess.getElementsByTagName('li');
-
-inputPesquisaa.addEventListener('keyup', function() {
-  const termoPesquisaa = inputPesquisaa.value.toLowerCase();
-
-  for (let i = 0; i < itensListaa.length; i++) {
-    const itemTextoo = itensListaa[i].textContent.toLowerCase();
-
-    if (itemTextoo.indexOf(termoPesquisaa) > -1) {
-      itensListaa[i].style.display = 'block';
-    } else {
-      itensListaa[i].style.display = 'none';
-    }
-  }
-});
+  iconePerfil.addEventListener('click', function () {
+    modal.style.display = 'block';
+  });
 </script>
 
-<!--------------------- Fim do Codigo da modal ------------------------->
-
-</body>
-
-</html>
+<a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModaltres"><img
+  src="imagens/marcos.jpeg" class="rounded-circle-profile" alt=""></a>
