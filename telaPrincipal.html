@@ -85,10 +85,8 @@
           <button class="btn btn-secondary" type="submit">Pesquisar</button>
         </form>
       </div>
-      <div class="profile">
-        <a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img src="imagens/marcos.jpeg" class="rounded-circle-profile" alt="">
-        </a>
+      <div>
+        <a href="#" class="profile-pic" data-bs-toggle="modal" data-bs-target="#exampleModaltres"> <img src="imagens/marcos.jpeg" class="rounded-circle-profile" alt=""></a>
       </div>
     </div>
   </nav>
@@ -207,7 +205,7 @@
     </div>
   
     <div class="container-fluid text-center">
-      <div class="row row-cols-auto">
+      <div class="row row-cols-auto" id="transicaoCima">
         <div class="col">
           <a href="telaFilme.html"><img id="filmeRecomendado" src="/imagens/matrix.jpeg"></a>
         </div>
@@ -272,41 +270,36 @@
   <!--------------------- Codigo da modal ------------------------->
 
   <!-- Modal Perfil -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModaltres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content bg-dark text-white">
+      <div class="modal-content" id="cor"> 
         <div class="modal-header">
-          <div class="row">
-            <h1 class="modal-title" id="exampleModalLabel">Olá Antonio Marcos!</h1>
-            <h6>antonio123@gmail.com</h6>
-          </div>
+          <h1 class="modal-title" id="exampleModalLabel">Olá Antonio Marcos !</h1>
         </div>
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img src="imagens/marcos.jpeg" style="width: 150px; height: 150px;" class="rounded-circle"
-            alt="Foto de perfil">
-          <div class="paisIdioma">
-            <div>
-              <p><a href="#" class="btnpais" data-bs-toggle="modal" data-bs-target="#modalpais"><img
-                    src="imagens/mundo1.png" style="margin-right: 10px;" id="mundo">País</a></p>
-              <p id="salve">Brazil</p>
-            </div>
-            <div>
-              <p><a href="#" class="btnidioma" data-bs-toggle="modal" data-bs-target="#modalIdiomaPais"> <img
-                    src="imagens/idioma.png" alt="" id="idioma"> Idioma</a></p>
-              <p id="salvetmb">Português</p>
-            </div>
+        <div class="modal-body">
+          <p>antonio123@gmail.com</p>
+        </div>
+        <div class="jota">
+          <img src="imagens/marcos.jpeg" class="rounded-circle" alt="Foto de perfil">
+        </div>
+        <div class="paisIdioma">
+          <div>
+          <p><a href="#" class="btnpais" data-bs-toggle="modal" data-bs-target="#modalpais"> <img src="imagens/mundo1.png" alt="" id="mundo"> País</a></a></p>
+          <p id="salve">Brazil</p>
+          </div>
+          <div>
+          <p><a href="#" class="btnidioma" data-bs-toggle="modal" data-bs-target="#modalIdiomaPais" > <img src="imagens/idioma.png" alt="" id="idioma"> Idioma</a></p>
+          <p id="salvetmb">Português</p>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#excluirModal">Excluir
-            contar</button>
-          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#sairModal">Sair da
-            conta</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <div>
+            <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#excluirModal" >Excluir conta</a> 
+            <a href="#" class="btnex" data-bs-toggle="modal" data-bs-target="#sairModal">Sair</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <!-- Modal Exluir Conta -->
@@ -383,7 +376,7 @@
       <div class="modal-content bg-dark" id="modalContent">
         <div class="modal-header">
           <div>
-            <h1 class="tituloPais">Idiomas</h1>
+            <h1 class="tituloPais">Idiomas</h1>  
             <p> Por favor, escolha seu Idioma </p>
           </div>
         </div>
