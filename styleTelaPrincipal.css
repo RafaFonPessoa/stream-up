@@ -63,6 +63,18 @@ section {
 .item {
     position: relative;
     padding: 0 2px;
+    transition: transform 0.3s ease-in-out;
+}
+.item:hover {
+    transform: translateY(-10%);
+}
+
+.col {
+    transition: transform 0.3s ease-in-out;
+}
+
+.col:hover {
+    transform: translateY(-10%);
 }
 
 .arrow__btn {
