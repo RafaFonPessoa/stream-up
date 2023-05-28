@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/loginCadastro.css">
+
+</head>
+<body class="bg-black text-white">
+    <div class="container my-5">
+        <div >
+        <div class="cadastro">
+            <div class="logo">
+                <img src="streamuplogo.png" alt="Stream Up Logo">
+            </div>
+            <div class="text-center">
+                <h1 class="text-center mb-4">Cadastrar-se</h1>
+                <p1>Preencha os campus para se cadastrar</p1>
+            </div>
+            <hr>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="name-input">Nome</label>
+                    <input type="text" class="form-control bg-secondary text-white" id="name-input" name="name"
+                        placeholder="Digite o nome">
+                </div>
+                <div class="form-group">
+                    <label for="email-input">Email</label>
+                    <input type="email" class="form-control bg-secondary text-white" id="email-input" name="email"
+                        placeholder="Digite o email">
+                </div>
+                <div class="form-group">
+                    <label for="password-input">Senha</label>
+                    <input type="password" class="form-control bg-secondary text-white" id="password-input"
+                        name="password" placeholder="Digite a senha">
+                </div>
+                <div class="form-group">
+                    <label for="confpass-input">Confirmar Senha</label>
+                    <input type="password" class="form-control bg-secondary text-white" id="confpass-input"
+                        name="confirmPassword" placeholder="Digite a senha novamente">
+                </div>
+                <div class="text-center" style="margin-top: 1em;">
+                    <a href="Login.html" class="text-danger">JÁ TENHO UMA CONTA</a>
+                </div>
+                <button type="submit" style="margin: 1em 0px 1em;"
+                    class="btn btn-danger btn-lg w-100">Registrar
+                </button>
+            </form>
+        </div>
+    </div>
+
+     <!-- Axios -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script>
+         const registerForm = document.getElementById('register-form');
+
+         registerForm.addEventListener('submit', async (event) => {
+             event.preventDefault();
+
+             const name = document.getElementById('name-input').value;
+             const email = document.getElementById('email-input').value;
+             const password = document.getElementById('password-input').value;
+             const confirmpassword = document.getElementById('confpass-input').value;
+
+             if (!name || !email || !password || !confirmpassword) {
+                 alert("Preencha todos os campos para se cadastrar!")
+                 return
+             }
+
+             if (password !== confirmpassword) {
+                 alert("As senhas não são semelhantes, por favor digite novamente!")
+                 return
+             }
+
+             try {
+                 const response = await axios.post('http://localhost:3000/auth/register', {
+                     name,
+                     email,
+                     password,
+                     confirmpassword,
+                 });
+                 console.log(response.data);
+
+                 window.location.href = "Transition.html";
+
+             } catch (error) {
+                 if (error.response.status === 422 &&
+                     error.response.data.msg === 'Email já cadastrado! por favor, utilize outro email!') {
+                     alert("O email já está registrado. Por favor, use outro email.");
+                 } else if (error.response) {
+                     console.error(error.response.data);
+                 } else {
+                     console.error(error.message);
+                 }
+             }
+         })
+     </script>
+</body>
+</html>

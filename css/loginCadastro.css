@@ -1,0 +1,37 @@
+body {
+    background-image: url(blob.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cadastro {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cadastro .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.cadastro .logo img {
+    width: 288px;
+    height: 218px;
+}
+
+.my-login {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.my-login .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.my-login .logo img {
+    width: 288px;
+    height: 218px;
+}
