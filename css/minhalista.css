@@ -1,0 +1,38 @@
+body{
+    background-image: url(blob.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#filmeLista {
+    width: 240px;
+    height: 150px;
+    margin: 20px;
+    box-shadow: 10px 5px 5px black;
+    ;
+}
+
+.col {
+    transition: transform 0.3s ease-in-out;
+}
+
+.col:hover {
+    transform: translateY(-10%);
+}
+
+
+.item {
+    position: relative;
+    padding: 0 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover {
+    transform: translateY(-10%);
+}
+
+body {
+    background-image: url(css/blob.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

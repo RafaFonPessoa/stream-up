@@ -1,0 +1,213 @@
+
+#cor{
+  background-color: #201f1f;
+}
+
+.modal-content {
+  background-color: rgb(170, 9, 9);
+}
+.modal-title{
+  color: #ffffff;
+}
+.modal-body {
+  color: #000000;
+}
+.btn-secondary {
+  background-color: #5C5C5C;
+  border-color: #5C5C5C;
+}
+.btn-secondary:hover {
+  background-color: #5C5C5C;
+  border-color: #5C5C5C;
+}
+.btnex {
+  text-decoration: none;
+  color: #797a7b;
+  display: block;
+  position: relative;
+  top: 20px;
+  right: 350px; 
+}
+body{
+  background-color: rgb(148, 47, 47);
+}
+.btn-primary:hover {
+  background-color: #A81717;
+  border-color: #A81717;
+
+}
+.btn-primary {
+  background-color: #A81717;
+  border-color: #A81717;
+  
+}
+.jota{
+  border-top-left-radius: 0.9rem;
+  border-top-right-radius: 0.9rem;
+  padding: 10px;
+  align-self: center;
+  position: relative;
+  top: -20px;
+}
+.jota img {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.btnpais {
+  text-decoration: none;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 20px;
+  left: 70px;
+}
+.btnidioma {
+  text-decoration: none;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 20px;
+  left: 70px;
+}
+.rounded-circle-profile {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.rounded-circle-profile:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.modal-content{
+  height: 600px;
+}
+.paisIdioma{
+  position: relative;
+  top: -50px;
+}
+.modal-footer{
+  position: relative;
+  top: -60px;
+}
+#modalSair{
+  height: 250px;
+}
+#modalExcluir{
+  height: 250px;
+}
+#modalFosa{
+  border: none;
+}
+#modalFoex{
+  border: none;
+}
+#salve{
+  position: relative;
+  top: -6px;
+  left: 121px;
+}
+#salvetmb{
+  position: relative;
+  top: -6px;
+  left: 121px;
+}
+#mundo{
+  position:relative;
+  left:10px;
+  height: 30px;
+}
+#idioma{
+  position:relative;
+  left:10px;
+  height: 30px;
+}
+#modalIdPais {
+  font-size: 30px;
+}
+.tituloPais {
+  color: azure;
+  
+}
+.js-example-basic-multiple{
+  width: 80%;
+  height: 80%;
+  position: relative;
+  padding-top: 80px;
+}
+.idiomas {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.lista-idiomas {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 260px;
+  width: 100%;
+  overflow-y: scroll;
+  color: #a19a9a;
+}
+
+.lista-idiomas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-idiomas li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.lista-idiomas li:hover {
+  background-color: #020101;
+}
+
+#pesquisar-idioma:focus + .lista-idiomas {
+  display: block;
+}
+
+.paises {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+.lista-paises {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  height: 260px;
+  width: 100%;
+  overflow-y: scroll;
+  color: #a19a9a;
+}
+
+.lista-paises ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-paises li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.lista-paises li:hover {
+  background-color: #020101;
+}
+
+#pesquisar-pais:focus + .lista-paises {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,25 @@
+*{
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #000000, #dc3545);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+}
+
+li:hover {
+    background-color: #DC3545;
+}
