@@ -5,6 +5,9 @@
 .navbar {
     background-image: linear-gradient(to right, #000000, #dc3545);
     font-family: 'Montserrat', sans-serif;
+    box-shadow:  -7px 7px 14px #4b2d31,
+             7px -7px 14px #d53444;
+    margin-bottom: 3em;
 }
 
 .profile {

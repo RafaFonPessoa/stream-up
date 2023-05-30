@@ -89,8 +89,8 @@ section {
 }
 
 #thumbnailMovie {
-    width: 150px;
-    height: 240px;
+    width: 9em;
+    height: 15em;
     margin: 20px;
     border-radius: 5%;
 }
